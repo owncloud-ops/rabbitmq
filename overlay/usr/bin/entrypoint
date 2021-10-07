@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+set -eo pipefail
+
+# shellcheck disable=SC1091
+source /usr/local/lib/log.sh
+
+log_info "Preparing rabbitmq"
+/usr/local/bin/gomplate -o /etc/rabbitmq/conf.d/rabbitmq.conf -f /etc/templates/rabbitmq.conf.tmpl
+
+log_info "Starting rabbitmq"
+exec rabbitmq-server

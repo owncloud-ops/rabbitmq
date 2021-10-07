@@ -1,0 +1,29 @@
+## Defaults
+# During the first start, RabbitMQ will create a vhost and a user.
+default_permissions.configure = .*
+default_permissions.read = .*
+default_permissions.write = .*
+
+default_vhost = {{ getenv "RABBITMQ_VHOST" "/" }}
+default_user = {{ getenv "RABBITMQ_USER" "guest" }}
+default_pass = {{ getenv "RABBITMQ_PASSWORD" "guest" }}
+
+## Resource Limits & Flow Control
+{{ if not (getenv "RABBITMQ_VM_MEMORY_HIGH_WATERMARK_ABSOLUTE") }}
+vm_memory_high_watermark.relative = {{ getenv "RABBITMQ_VM_MEMORY_HIGH_WATERMARK_RELATIVE" "0.4" }}
+{{ end }}
+{{ if (getenv "RABBITMQ_VM_MEMORY_HIGH_WATERMARK_ABSOLUTE") }}
+vm_memory_high_watermark.absolute = {{ getenv "RABBITMQ_VM_MEMORY_HIGH_WATERMARK_ABSOLUTE" }}
+{{ end }}
+
+{{ if not (getenv "RABBITMQ_DISK_FREE_LIMIT_ABSOLUTE") }}
+# disk_free_limit.relative = {{ getenv "RABBITMQ_DISK_FREE_LIMIT_RELATIVE" "1.0" }}
+{{ else }}
+disk_free_limit.absolute = {{ getenv "RABBITMQ_DISK_FREE_LIMIT_ABSOLUTE" }}
+{{ end }}
+
+## Logging settings
+log.file = false
+
+log.console = true
+log.console.level = {{ getenv "RABBITMQ_LOG_LEVEL" "info" }}

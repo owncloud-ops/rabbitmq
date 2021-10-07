@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+set -eo pipefail
+
+rabbitmq-diagnostics -q ping || exit 1
