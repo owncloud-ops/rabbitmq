@@ -40,7 +40,6 @@ steps:
     password:
       from_secret: docker_password
     repo: owncloudops/${DRONE_REPO_NAME}
-    target: rabbitmq
     username:
       from_secret: docker_username
   when:
