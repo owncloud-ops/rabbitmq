@@ -1,9 +1,9 @@
 ---
 repository:
   name: rabbitmq
-  description: Docker image for rabbitmq
+  description: Custom container image for RabbitMQ
   homepage: https://hub.docker.com/r/owncloudops/rabbitmq
-  topics: docker, rabbitmq
+  topics: oci, container, rabbitmq
 
   private: false
   has_issues: true

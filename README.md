@@ -3,7 +3,7 @@
 [![Build Status](https://drone.owncloud.com/api/badges/owncloud-ops/rabbitmq/status.svg)](https://drone.owncloud.com/owncloud-ops/rabbitmq/)
 [![Docker Hub](https://img.shields.io/badge/docker-latest-blue.svg?logo=docker&logoColor=white)](https://hub.docker.com/r/owncloudops/rabbitmq)
 
-Docker image for RabbitMQ Messsage Broker.
+Custom container image for [RabbitMQ](https://www.rabbitmq.com/) Messsage Broker.
 
 ## Ports
 
