@@ -2,6 +2,7 @@
 
 [![Build Status](https://drone.owncloud.com/api/badges/owncloud-ops/rabbitmq/status.svg)](https://drone.owncloud.com/owncloud-ops/rabbitmq/)
 [![Docker Hub](https://img.shields.io/badge/docker-latest-blue.svg?logo=docker&logoColor=white)](https://hub.docker.com/r/owncloudops/rabbitmq)
+[![Quay.io](https://img.shields.io/badge/quay-latest-blue.svg?logo=docker&logoColor=white)](https://quay.io/repository/owncloudops/rabbitmq)
 
 Custom container image for [RabbitMQ](https://www.rabbitmq.com/) Messsage Broker.
 
