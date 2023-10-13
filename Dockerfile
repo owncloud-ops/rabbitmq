@@ -1,5 +1,5 @@
 
-FROM docker.io/amd64/rabbitmq:3.12.6-alpine@sha256:88c2b8dd4ab84ad07d12f55fa3f06b8bf4d73492f2c810cbd3aae23f17b49562
+FROM docker.io/amd64/rabbitmq:3.12.6-alpine@sha256:04115307ecabe8b32b9a4e3e2c0475ddd95e8f515d58dacea95cf458121ce82f
 
 LABEL maintainer="ownCloud DevOps <devops@owncloud.com>"
 LABEL org.opencontainers.image.authors="ownCloud DevOps <devops@owncloud.com>"
